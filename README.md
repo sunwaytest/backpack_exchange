@@ -1,13 +1,13 @@
 # backpack_exchange
-
+1. Trading Volume
  要用脚本请把本文档看完
  
  运行命令：
  先运行 npm install
  后运行 node ./index.js
 
- 先用我的邀请码注册backpack交易所：https://backpack.exchange/signup?referral=9ed76787-d966-4122-9a58-cd93d3a44de3
- 不会的用脚本的可以推特私信问我 https://twitter.com/zisan_xyz
+ 先用我的邀请码注册backpack交易所：https://backpack.exchange/refer/eb8a7912-d2f2-4772-8890-9cd9a298ca05
+ 不会的用脚本的可以推特私信问我 https://twitter.com/xueyun26946630
 
  没node的安装一下 这是教程：https://www.runoob.com/nodejs/nodejs-install-setup.html
 
@@ -23,3 +23,7 @@
 
 在这创建你的api keys https://backpack.exchange/settings/api-keys
 ![image](https://github.com/catsats/backpack_exchange/assets/154321884/9afa6f34-6d8f-495c-b6b7-e43c7f18cff5)
+
+
+2. Grid Trading
+ node ./grid_trading.js

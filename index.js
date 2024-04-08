@@ -83,6 +83,9 @@ const init = async (client, token, random, money) => {
             })
             //当前账号价值最大的币种名字 跳过symbol为USDC的币种
             let maxToken = Object.keys(userbalance).filter((item) => item != 'USDC' && token.includes(`${item}_USDC`)).reduce((a, b) => userbalance[a].value > userbalance[b].value ? a : b);
+            if (maxToken == "SOL") {
+                maxToken = "WEN"
+            }
             console.log('账号价值最大的币种',maxToken);
             let condition1 = maxToken == "USDC" ? true : userbalance[maxToken].value < 8;
             //判断账号USDC余额是否大于5以及购买的币种余额是否小于5USDC
@@ -230,6 +233,7 @@ const buyfun = async (client, token, money, tokensDecimal) => {
     let moneyAnserArr = moneyAnser.split('-').map(s => parseInt(s, 10));
     moneyAnserArr = Array.from({ length: moneyAnserArr[1] - moneyAnserArr[0] + 1 }, (_, index) => index + moneyAnserArr[0]);
 
+    //函数主入口
     const apisecret = "";
     const apikey = "";
     const client = new backpack_client_1.BackpackClient(apisecret, apikey);
